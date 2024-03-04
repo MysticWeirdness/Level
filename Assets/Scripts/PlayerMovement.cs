@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerAnimations stateMachine;
 
-    private float movSpeed = 2f;
+    private float movSpeed = 3f;
     private bool onLadder = false;
     private bool touchingLadder = false;
     [SerializeField] private bool isGrounded = true;
@@ -64,12 +64,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(movement.x != 0 && isGrounded && !onLadder && controls.Controller.Run.ReadValue<float>() < 0.5f)
         {
-            movSpeed = 2f;
+            movSpeed = 3f;
             stateMachine.SwitchState(PlayerAnimations.State.walking);
         }
         else if (movement.x != 0 && isGrounded && !onLadder && controls.Controller.Run.ReadValue<float>() >= 0.5f)
         {
-            movSpeed = 3f;
+            movSpeed = 4f;
             stateMachine.SwitchState(PlayerAnimations.State.running);
         }
         else if (rb.velocity.y > 0 && !isGrounded && !onLadder)

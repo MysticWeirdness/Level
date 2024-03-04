@@ -66,9 +66,4 @@ public class PlayerAnimations : MonoBehaviour
                 break;
         }
     }
-
-    private void Update()
-    {
-        Debug.Log(GetCurrentState());
-    }
 }
