@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6967159710269421104}
   - component: {fileID: 5345736898250671550}
   - component: {fileID: 3470819416860219357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DeathPlane
   m_TagString: Smash
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8458079863976085973}
   - component: {fileID: 3007741119740845393}
   - component: {fileID: 2771617566738994436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmashPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

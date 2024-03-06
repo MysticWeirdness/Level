@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = GroundCheck();
         Vector2 movement = controls.Controller.Movement.ReadValue<Vector2>();
         
-        if(movement == Vector2.zero && isGrounded && !onLadder && !attacking)
+        if(movement.x == 0 && isGrounded && !onLadder && !attacking)
         {
             stateMachine.SwitchState(PlayerAnimations.State.idle);
         }

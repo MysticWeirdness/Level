@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8150327145769986697}
   - component: {fileID: 3786975975445633744}
   - component: {fileID: 8532699796535278636}
+  - component: {fileID: 6130550114871018206}
   m_Layer: 7
   m_Name: Vipertongue
   m_TagString: Untagged
@@ -112,13 +113,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e65f4242f105944e8dfd6de386d1b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateMachine: {fileID: 3314404068276859114}
+  attackingCollider: {fileID: 6130550114871018206}
   right: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
-  player:
+  playerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!68 &8150327145769986697
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -188,6 +191,41 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!58 &6130550114871018206
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324623654161247744}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6615436, y: -0.14581218}
+  serializedVersion: 2
+  m_Radius: 0.16312242
 --- !u!1 &7829674039846342809
 GameObject:
   m_ObjectHideFlags: 0

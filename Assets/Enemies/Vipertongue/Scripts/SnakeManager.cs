@@ -13,10 +13,6 @@ public class SnakeManager : MonoBehaviour
     {
         movementHandler = GetComponent<MovementHandler>();
     }
-    void Attack()
-    {
-        snakesStateMachine.SwitchState(SnakesStateMachine.State.attacking);
-    }
 
     public void HurtPlayer()
     {
@@ -24,13 +20,6 @@ public class SnakeManager : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector2.right * movementHandler.movDir, 1f, mask))
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerManager>();
-        }
-    }
-    private void Update()
-    {
-        if (Physics2D.Raycast(transform.position, Vector2.right * movementHandler.movDir, 1f, mask))
-        {
-            Attack();
         }
     }
 }

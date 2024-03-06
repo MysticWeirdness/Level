@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.XR.OpenVR;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.iOS;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -21,6 +24,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void TakeDamage(int amt)
     {
+        
         health -= amt;
         if(health <= 0)
         {
